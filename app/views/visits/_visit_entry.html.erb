@@ -1,8 +1,8 @@
 <tr>
-  <td><%= visit.id %></td>
+  <td><%= link_to visit.id, visit %></td>
   <td><%= visit.visitor.name %></td>
   <td><%= visit.visitor.company %></td>
   <td><%= visit.employee %></td>
-  <td><%= visit.created_at %></td>
-  <td><%= visit.checked_out_at %></td>
+  <td><%= visit.created_at.to_formatted_s(:short) %></td>
+  <td><%= visit.checked_out_at.try(:to_formatted_s, :short) %></td>
 </tr>
