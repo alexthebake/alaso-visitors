@@ -1,0 +1,23 @@
+<div class="panel">
+  <div class="panel-heading">
+    <h3 class="panel-title">Check In</h3>
+  </div>
+  <div class="panel-new-visitor">
+    <%= form_tag '/visits', method: :post %>
+      <div class="form-control">
+        <%= text_field_tag :first_name, nil, placeholder: 'First Name' %>
+      </div>
+      <div class="form-control">
+        <%= text_field_tag :last_name, nil, placeholder: 'Last Name' %>
+      </div>
+      <div class="form-control">
+        <%= text_field_tag :company, nil, placeholder: 'Company' %>
+      </div>
+      <div class="form-control">
+        <%= text_field_tag :employee, nil, placeholder: 'Employee' %>
+      </div>
+      <div class="form-control">
+        <%= submit_tag 'Check In'%>
+      </div>
+  </div>
+</div>

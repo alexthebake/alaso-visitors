@@ -1,0 +1,15 @@
+<div class="panel">
+  <div class="panel-heading">
+    <h3 class="panel-title">Visit</h3>
+  </div>
+  <div class="panel-body">
+    <table>
+      <%= render 'visit_header' %>
+      <tbody>
+        <% @visits.each do |visit| %>
+          <%= render 'visit_entry', visit: visit %>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
