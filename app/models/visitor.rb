@@ -1,5 +1,5 @@
 class Visitor < ActiveRecord::Base
-  has_many :visits
+  has_many :visits, dependent: :destroy
   validates :first_name, presence: true
   validates :last_name,  presence: true
 

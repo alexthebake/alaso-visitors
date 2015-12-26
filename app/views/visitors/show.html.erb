@@ -2,6 +2,7 @@
   <div class="panel-heading">
     <h3 class="panel-title visitor-name">Visitor: <%= @visitor.name %></h3>
     <h4 class="visitor-company">Company: <%= @visitor.company %></h4>
+    <%= link_to 'Edit Visitor', edit_visitor_path(@visitor) %>
   </div>
   <div class="panel-body">
     <h2>Visits</h2>

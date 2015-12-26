@@ -1,0 +1,23 @@
+<div class="panel">
+  <div class="panel-heading">
+    <h3 class="panel-title">Edit Vistor</h3>
+  </div>
+  <div class="panel-new-visitor">
+    <%= form_tag visitor_path(@visitor), method: :put %>
+      <div class="form-control">
+        <%= text_field_tag :first_name, @visitor.first_name %>
+      </div>
+      <div class="form-control">
+        <%= text_field_tag :last_name, @visitor.last_name %>
+      </div>
+      <div class="form-control">
+        <%= text_field_tag :company, @visitor.company %>
+      </div>
+      <div class="form-control">
+        <%= submit_tag 'Edit'%>
+      </div>
+      <div>
+        <%= link_to 'Delete Visitor', visitor_path(@visitor), method: :delete, class: 'btn' %>
+      </div>
+  </div>
+</div>
