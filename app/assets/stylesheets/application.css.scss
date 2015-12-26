@@ -1,0 +1,142 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+header {
+	position: relative;
+	height: 200px;
+
+	.logo {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+* {
+	font-family: 'Roboto', sans-serif !important;
+	text-decoration: none;
+}
+
+
+html, body {
+	height: 100%;
+	position: relative;
+}
+
+$border: 7px;
+$spacing: 40px;
+
+
+.panel {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    box-sizing: border-box;
+    background: #006494;
+    border-radius: $border;
+    padding: $spacing;
+    width: 500px;
+    color: #fff;
+}
+
+.panel-title {
+	font-size: 50px;
+}
+
+.panel-heading {
+	margin-bottom: $spacing;
+	text-align: center
+}
+
+
+.btn {
+	display: block;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: $spacing;
+    text-align: center;
+    font-size: 35px;
+    border-radius: $border;
+    height: 50px;
+    padding-top: 13px;
+    background: #003554;
+    color: #fff;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+    &:hover {
+		background: #fff;
+		color: #003554;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
