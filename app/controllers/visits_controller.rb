@@ -15,16 +15,26 @@ class VisitsController < ApplicationController
       flash[:success] = 'You successfully checked in!'
       redirect_to root_path
     else
+      flash[:danger] = "First and last name are required."
       render :new
     end
   end
 
   def checkout
-    visit = Visit.find(params[:id])
-    visit.update(checked_out_at: DateTime.now)
+    if request.post?
+      begin
+        visit = Visit.find(params[:id])
+        visit.update(checked_out_at: DateTime.now)
+      rescue ActiveRecord::RecordNotFound => e
+        flash[:danger] = 'Could not find your visit.'
+        render :checkout
+      end
 
-    flash[:success] = 'You successfully checked out!'
-    redirect_to root_path
+      flash[:success] = 'You successfully checked out!'
+      redirect_to root_path
+    else
+      @visits = Visit.where(checked_out_at: nil)
+    end
   end
 
   private
