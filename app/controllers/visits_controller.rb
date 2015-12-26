@@ -20,11 +20,15 @@ class VisitsController < ApplicationController
   end
 
   def checkout
-    visit = Visit.find(params[:id])
-    visit.update(checked_out_at: DateTime.now)
+    if request.post?
+      visit = Visit.find(params[:id])
+      visit.update(checked_out_at: DateTime.now)
 
-    flash[:success] = 'You successfully checked out!'
-    redirect_to root_path
+      flash[:success] = 'You successfully checked out!'
+      redirect_to root_path
+    else
+      @visits = Visit.where(checked_out_at: nil)
+    end
   end
 
   private

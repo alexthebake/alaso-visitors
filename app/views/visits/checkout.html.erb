@@ -1,0 +1,21 @@
+<div class="panel">
+  <div class="panel-heading">
+    <h3 class="panel-title">Visit</h3>
+  </div>
+  <div class="panel-body">
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Check Out</th>
+      </tr>
+      <tbody>
+        <% @visits.each do |visit| %>
+          <tr>
+            <td><%= visit.visitor.name %></td>
+            <td><%= link_to 'Check Out', {controller: 'visits', action: 'checkout', id: visit.id }, method: :post %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
