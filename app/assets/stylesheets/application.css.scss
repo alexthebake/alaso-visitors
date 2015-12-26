@@ -147,10 +147,14 @@ $spacing: 40px;
 	    padding-top: 13px;
 	    background: #003554;
 	    color: #fff;
+	    margin-bottom: $spacing;
 
         &:hover {
     		background: #fff;
     		color: #003554;
+        }
+        &:last-child {
+			margin-bottom: 0;
         }
 	}
 }
