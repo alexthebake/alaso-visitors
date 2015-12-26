@@ -14,7 +14,7 @@
           <tr>
             <td><%= visit.visitor.name %></td>
             <td><%= visit.created_at.to_formatted_s(:short) %></td>
-            <td><%= link_to 'Check Out', {controller: 'visits', action: 'checkout', id: visit.id }, method: :post %></td>
+            <td class="check-out"><%= link_to 'Check Out', {controller: 'visits', action: 'checkout', id: visit.id }, method: :post %></td>
           </tr>
         <% end %>
       </tbody>
