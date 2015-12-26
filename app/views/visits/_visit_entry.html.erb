@@ -5,4 +5,5 @@
   <td><%= visit.employee %></td>
   <td><%= visit.created_at.to_formatted_s(:short) %></td>
   <td><%= visit.checked_out_at.try(:to_formatted_s, :short) %></td>
+  <td><%= distance_of_time_in_words(visit.duration) if visit.duration %></td>
 </tr>
