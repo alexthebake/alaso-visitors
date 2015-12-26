@@ -1,0 +1,17 @@
+<div class="panel panel-wide">
+  <div class="panel-heading">
+    <h3 class="panel-title visitor-name">Visitor: <%= @visitor.name %></h3>
+    <h4 class="visitor-company">Company: <%= @visitor.company %></h4>
+  </div>
+  <div class="panel-body">
+    <h2>Visits</h2>
+    <table>
+      <%= render 'visits/visit_header' %>
+      <tbody>
+        <% @visitor.visits.each do |visit| %>
+          <%= render 'visits/visit_entry', visit: visit %>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
